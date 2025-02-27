@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="点击召唤下节课可能会讲的 mapper 接口，闭眼以忽略红色波浪线">
+<mapper namespace="嗨，这里是 Mapper 接口类名，点击召唤下节课可能会讲的 mapper 接口；如果你正在看源代码，请闭眼以忽略红色波浪线">
     <select id="selectStudent" resultType="hashmap">
         SELECT * FROM student
     </select>

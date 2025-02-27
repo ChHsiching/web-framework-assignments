@@ -18,9 +18,11 @@ public class Main {
         //3.执行sql语句
         List<Map<String, Object>> list = sqlSession.selectList("selectStudent");
         //4.输出结果
+        System.out.println("=====================");
         for (Map<String, Object> map : list) {
             System.out.println(map);
         }
+        System.out.println("=====================");
         //5.关闭数据库
         sqlSession.close();
     }

@@ -19,7 +19,7 @@ public class Main {
         List<Map<String, Object>> list = sqlSession.selectList("selectStudent");
         //4.输出结果
         for (Map<String, Object> map : list) {
-          System.out.println(map);
+            System.out.println(map);
         }
         //5.关闭数据库
         sqlSession.close();

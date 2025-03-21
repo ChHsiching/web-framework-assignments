@@ -1,5 +1,6 @@
 package com.hsipig;
 
+import domain.Student;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -7,7 +8,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,10 +22,14 @@ public class Main {
 
         //3.执行sql语句
 //        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByStudentName","张三");
-        Map<String,Object> cnd=new HashMap<>();
-        cnd.put("studentName", "张三");
-        cnd.put("studentId", "1");
-        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByMap", cnd);
+//        Map<String,Object> cnd=new HashMap<>();
+//        cnd.put("studentName", "张三");
+//        cnd.put("studentNo", "1");
+//        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByMap", cnd);
+        Student student = new Student();
+        student.setStudentName("张三");
+        student.setStudentNo("1");
+        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByNameAndNo", student);
 
         //4.输出结果
         System.out.println("=====================");

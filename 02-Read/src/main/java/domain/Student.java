@@ -2,23 +2,23 @@ package domain;
 
 public class Student {
     // 学生姓名
-    String studentName;
+    String name;
     // 学号
-    String studentNo;
+    String no;
 
-    public String getStudentName() {
-        return studentName;
+    public String getName() {
+        return name;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getStudentNo() {
-        return studentNo;
+    public String getNo() {
+        return no;
     }
 
-    public void setStudentNo(String studentNo) {
-        this.studentNo = studentNo;
+    public void setNo(String no) {
+        this.no = no;
     }
 }

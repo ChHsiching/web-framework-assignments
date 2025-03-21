@@ -9,7 +9,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Map;
 
 
 public class Main {
@@ -21,22 +20,40 @@ public class Main {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         //3.执行sql语句
-//        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByStudentName","张三");
+//        1. 单个参数查询
+//        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByStudentName","张三")
+
+//        2. 多个参数查询
 //        Map<String,Object> cnd=new HashMap<>();
 //        cnd.put("studentName", "张三");
 //        cnd.put("studentNo", "1");
 //        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByMap", cnd);
-        Student student = new Student();
-        student.setStudentName("张三");
-        student.setStudentNo("1");
-        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByNameAndNo", student);
 
-        //4.输出结果
+//        3. 实体类 hashmap 查询
+//        Student student = new Student();
+//        student.setStudentName("张三");
+//        student.setStudentNo("1");
+//        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByNameAndNo", student);
+
+//        //4.输出结果
+//        System.out.println("=====================");
+//        for (Map<String, Object> map : list) {
+//            System.out.println(map);
+//        }
+//        System.out.println("=====================");
+
+//        4. 实体类查询
+        Student student = new Student();
+        student.setName("张三");
+        student.setNo("1");
+        List<Student> list = sqlSession.selectList("selectNameByStudentInfo", student);
+
         System.out.println("=====================");
-        for (Map<String, Object> map : list) {
-            System.out.println(map);
+        for (Student student1 : list) {
+            System.out.println(student1.getName());
         }
         System.out.println("=====================");
+
         //5.关闭数据库
         sqlSession.close();
     }

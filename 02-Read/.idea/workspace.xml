@@ -7,6 +7,7 @@
     <list default="true" id="2c2476d7-f187-4da0-98dc-90b8e1d64d1a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hsipig/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hsipig/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/home/chhsich/Documents/Work/Framework/Assignments/02-Read/src/main/java/com/hsipig/Main.java",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -111,11 +112,15 @@
       <updated>1731801678324</updated>
       <workItem from="1731801680486" duration="86000" />
       <workItem from="1731801773199" duration="96000" />
-      <workItem from="1742512413173" duration="3893000" />
+      <workItem from="1742512413173" duration="11888000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

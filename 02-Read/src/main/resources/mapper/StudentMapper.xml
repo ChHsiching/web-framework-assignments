@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="xxx">
+<mapper namespace="x">
     <select id="selectStudentByName" parameterType="String" resultType="hashmap">
         SELECT * FROM student
                  WHERE name=#{studentName}
@@ -17,5 +17,10 @@
     <select id="selectStudentByNameAndNo" parameterType="domain.Student" resultType="hashmap">
         SELECT * FROM student
                  WHERE name=#{studentName} AND no=#{studentNo}
+    </select>
+
+    <select id="selectNameByStudentInfo" parameterType="domain.Student" resultType="domain.Student">
+        SELECT * FROM student
+                 WHERE name=#{name} AND no=#{no}
     </select>
 </mapper>

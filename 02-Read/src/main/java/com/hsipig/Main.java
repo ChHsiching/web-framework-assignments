@@ -42,16 +42,30 @@ public class Main {
 //        }
 //        System.out.println("=====================");
 
+//        --------------------------------------------------------------------------------------------------
+
 //        4. 实体类查询
+//        Student student = new Student();
+//        student.setName("张三");
+//        student.setNo("1");
+//        List<Student> list = sqlSession.selectList("selectNameByStudentInfo", student);
+//
+//        System.out.println("=====================");
+//        for (Student student1 : list) {
+//            System.out.println(student1.getName());
+//        }
+//        System.out.println("=====================");
+
+//        --------------------------------------------------------------------------------------------------
+
+//        5. 实体类查询单条记录
         Student student = new Student();
         student.setName("张三");
         student.setNo("1");
-        List<Student> list = sqlSession.selectList("selectNameByStudentInfo", student);
+        Student student1 = sqlSession.selectOne("selectNameByStudentInfo", student);
 
         System.out.println("=====================");
-        for (Student student1 : list) {
-            System.out.println(student1.getName());
-        }
+        System.out.println(student1.getName());
         System.out.println("=====================");
 
         //5.关闭数据库

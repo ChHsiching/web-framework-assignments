@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,8 +19,14 @@ public class Main {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         //2.得到执行sql的对象
         SqlSession sqlSession = sqlSessionFactory.openSession();
+
         //3.执行sql语句
-        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByStudentName","张三");
+//        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByStudentName","张三");
+        Map<String,Object> cnd=new HashMap<>();
+        cnd.put("studentName", "张三");
+        cnd.put("studentId", "1");
+        List<Map<String, Object>> list = sqlSession.selectList("selectStudentByMap", cnd);
+
         //4.输出结果
         System.out.println("=====================");
         for (Map<String, Object> map : list) {

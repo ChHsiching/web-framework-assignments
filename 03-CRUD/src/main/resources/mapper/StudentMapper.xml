@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="x">
+    <insert  id="insertStudent" parameterType="domain.Student" >
+        INSERT INTO student(name,no)
+            VALUES (#{name},#{no})
+    </insert>
+
+    <update id="updateStudent" parameterType="domain.Student">
+        UPDATE student
+            SET name=#{name}
+            WHERE no=#{no}
+    </update>
+
+    <delete id="deleteStudent" parameterType="string">
+        delete from student where name=#{name}
+    </delete>
+</mapper>
